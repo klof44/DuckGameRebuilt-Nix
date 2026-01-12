@@ -1,8 +1,8 @@
 {
-  description = "Duck Game decompiled & rebuilt with some added features, ";
+  description = "Duck Game decompiled & rebuilt with some added features";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs";
   };
 
   outputs = { nixpkgs, ... }:
