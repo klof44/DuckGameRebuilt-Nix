@@ -1,6 +1,10 @@
 # DuckGameRebuilt-Nix
 
 Experimental flake for installing [Duck Game Rebuilt](https://github.com/TheFlyingFoool/DuckGameRebuilt)  
+  
+>[!IMPORTANT]
+>Steam runs in a special environment and cannot see your PATH.  
+>You need to run the game with `DuckGameRebuilt` BEFORE you click invite links.
 
 ## Installation
 
