@@ -61,15 +61,4 @@ buildFHSEnv {
   '';
 
   runScript = "${DGR}/bin/DuckGame.sh -norebuiltupdates";
-
-  meta = with lib; {
-    description = "Duck Game decompiled & rebuilt with some added features";
-    longDescription = ''
-      Duck Game Rebuilt is a decompilation of Duck Game with massive improvements to performance, compatibility, and quality of life features.
-    '';
-    homepage = "https://github.com/TheFlyingFoool/DuckGameRebuilt";
-    license = licenses.unlicense;
-    platform = platforms.linux;
-    maintainers = with maintainers; [ klof44 ];
-  };
 }
