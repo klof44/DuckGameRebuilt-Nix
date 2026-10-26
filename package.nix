@@ -5,20 +5,21 @@
   makeDesktopItem,
   buildFHSEnv,
   mono,
-  SDL2,
-  lib
+  sdl3,
+  lib,
+  fna3d
 }:
 
 let
   pname = "DuckGameRebuilt";
-  version = "1.4.7.0";
+  version = "1.4.8";
 
   DGR = stdenv.mkDerivation {
     inherit pname version;
 
     src = fetchurl {
-      url = "https://github.com/TheFlyingFoool/DuckGameRebuilt/releases/download/v1.4.7/DuckGameRebuilt.zip";
-      sha256 = "1idnca210wdvlq6224i1961hqk72cxhljg9myfacccq7bkl997fw";
+      url = "https://github.com/TheFlyingFoool/DuckGameRebuilt/releases/download/v1.4.8/DuckGameRebuilt.zip";
+      sha256 = "4pwJxCAxKxyy0SuI1+C2A1DWnQ0ZHkxLzxOU0husmqQ=";
     };
 
     dontBuild = true;
@@ -51,7 +52,8 @@ buildFHSEnv {
   name = pname;
   targetPkgs = pkgs: [
     mono
-    SDL2
+    sdl3
+    fna3d
   ];
 
   extraInstallCommands = ''
