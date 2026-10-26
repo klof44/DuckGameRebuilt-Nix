@@ -12,14 +12,14 @@
 
 let
   pname = "DuckGameRebuilt";
-  version = "1.4.8";
+  version = "1.4.8.1";
 
   DGR = stdenv.mkDerivation {
     inherit pname version;
 
     src = fetchurl {
-      url = "https://github.com/TheFlyingFoool/DuckGameRebuilt/releases/download/v1.4.8/DuckGameRebuilt.zip";
-      sha256 = "4pwJxCAxKxyy0SuI1+C2A1DWnQ0ZHkxLzxOU0husmqQ=";
+      url = "https://github.com/TheFlyingFoool/DuckGameRebuilt/releases/download/v1.4.8.1/DuckGameRebuilt.zip";
+      sha256 = "/vW9PKrF49ULe7oKN5VWs+wKmsaeli0zNOjz0KIOEPA=";
     };
 
     dontBuild = true;
