@@ -18,8 +18,8 @@ let
     inherit pname version;
 
     src = fetchurl {
-      url = "https://github.com/TheFlyingFoool/DuckGameRebuilt/releases/download/v1.4.8.2/DuckGameRebuilt.zip";
-      sha256 = "M6x3QgQuOvB8DpbINLN0nsCZjBypbhmvfgyKPTXd56M=";
+      url = "https://github.com/TheFlyingFoool/DuckGameRebuilt/releases/download/v1.4.8.4/DuckGameRebuilt.zip";
+      sha256 = "YwmRyhxwzauotsd0seQ/0/M5TUO82veXC5J0QFVmzv8=";
     };
 
     dontBuild = true;
