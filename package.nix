@@ -7,7 +7,8 @@
   mono,
   sdl3,
   lib,
-  fna3d
+  fna3d,
+  libGL
 }:
 
 let
@@ -18,8 +19,8 @@ let
     inherit pname version;
 
     src = fetchurl {
-      url = "https://github.com/TheFlyingFoool/DuckGameRebuilt/releases/download/v1.4.8.4/DuckGameRebuilt.zip";
-      sha256 = "YwmRyhxwzauotsd0seQ/0/M5TUO82veXC5J0QFVmzv8=";
+      url = "https://github.com/TheFlyingFoool/DuckGameRebuilt/releases/download/v1.4.8.5/DuckGameRebuilt.zip";
+      sha256 = "sha256-L3xgOSQqyOGli2R+DEgmypHTEoHQslRR0NqQfwnLp98=";
     };
 
     dontBuild = true;
@@ -54,6 +55,7 @@ buildFHSEnv {
     mono
     sdl3
     fna3d
+    libGL
   ];
 
   extraInstallCommands = ''
@@ -62,5 +64,6 @@ buildFHSEnv {
     ln -s ${desktopItem}/share/applications/* $out/share/applications/
   '';
 
+  profile = ''export LD_LIBRARY_PATH="/run/opengl-driver/lib:/run/opengl-driver-32/lib"'';
   runScript = "${DGR}/bin/DuckGame.sh -norebuiltupdates";
 }
