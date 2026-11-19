@@ -20,7 +20,7 @@ Add the input to your flake
 
         DuckGameRebuilt = {
             url = "github:klof44/DuckGameRebuilt-Nix";
-            inputs.nixpkgs.follows = "nixpkgs";
+            # DO NOT USE inputs.nixpkgs.follows = "nixpkgs"; IT WILL BREAK
         };
     };
     outputs = inputs@{ nixpkgs, home-manager /* if using home-manager */, ... }: {
